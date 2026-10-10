@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+
+    /* No background */
+    background-image: url(Images/otlum.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+
+/* =========================================
+   FIRST PAGE
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    /* No background */
+    background: transparent;
+}
+
+
+/* Remove first-page background layers */
+.hero::before,
+.hero::after {
+    display: none;
+}
+
+
+/* =========================================
+   FIRST PAGE BOX
+========================================= */
+
+.center-box {
+    position: relative;
+    z-index: 2;
+
+    width: 400px;
+    padding: 50px;
+
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+
+    /* ONLY the box has a background */
+    background: rgba(0, 0, 0, 0.75);
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.center-box h1 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.center-box p {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.center-box:hover {
+    transform: scale(1.05);
+
+    border-color: red;
+
+    box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.8),
+        0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+
+/* =========================================
+   WELCOME PAGE
+========================================= */
+
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Welcome box */
+.welcome-box {
+    background: rgba(0, 0, 0, 0.651);
+    width: 400px;
+    padding: 50px;
+
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        background 0.5s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.welcome-box h2 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.welcome-box p {
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+
+/* Background ONLY when Welcome is hovered/focused */
+.welcome-box:hover,
+.welcome-box:focus {
+    background: linear-gradient(
+        45deg,
+        #000000,
+        #222222,
+        #555555,
+        #111111,
+        #000000
+    );
+
+    background-size: 400% 400%;
+
+    animation: welcomeGradient 5s ease infinite;
+
+    border-color: red;
+
+    box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.8),
+        0 0 30px rgba(255, 0, 0, 0.5);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   MODPACKS PAGE
+========================================= */
+
+/* =========================================
+   MODPACKS PAGE
+========================================= */
+
+.modpack-section {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: transparent;
+}
+
+
+/* Modpacks middle box */
+.modpack-box {
+    width: 400px;
+    padding: 50px;
+
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+
+    background: rgba(0, 0, 0, 0.651);
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        background 0.5s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Modpacks text */
+.modpack-box h2 {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.modpack-box p {
+    color: #ccc;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+
+/* Hover effect */
+.modpack-box:hover,
+.modpack-box:focus {
+    background: linear-gradient(
+        45deg,
+        #000000,
+        #222222,
+        #555555,
+        #111111,
+        #000000
+    );
+
+    background-size: 400% 400%;
+
+    animation: welcomeGradient 5s ease infinite;
+
+    border-color: red;
+
+    box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.8),
+        0 0 30px rgba(255, 0, 0, 0.5);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes welcomeGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}

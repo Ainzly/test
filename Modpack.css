@@ -1,0 +1,32 @@
+body {
+    background-image: url(Images/yobmot.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.modpack-section {
+    background: rgba(0, 0, 0, 0.651);
+    width: 400px;
+    padding: 50px;
+
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        background 0.5s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
